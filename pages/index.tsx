@@ -50,10 +50,10 @@ const fetchYouTubeTrends = async (selectedDate: string, niche: string, searchVol
 };
 
 const generateContentIdeas = async (term: string): Promise<ContentIdeas> => {
-     if (BACKEND_URL.includes('YOUR_VERCEL_BACKEND_URL')) {
+    if (BACKEND_URL.includes('YOUR_VERCEL_BACKEND_URL')) {
         throw new Error("Configuration Error: Please update the BACKEND_URL in index.tsx with your Vercel deployment URL.");
     }
-     try {
+    try {
         const response = await fetch(BACKEND_URL, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -64,8 +64,9 @@ const generateContentIdeas = async (term: string): Promise<ContentIdeas> => {
         return data as ContentIdeas;
     } catch (error) {
         handleApiError(error, 'generating content ideas');
+        throw error; // <--- THIS IS THE KEY!
     }
-}
+};
 
 
 // --- LOCAL STORAGE UTILS ---
