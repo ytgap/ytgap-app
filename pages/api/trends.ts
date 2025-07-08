@@ -104,7 +104,7 @@ const generateContentIdeasFromAI = async (term: string): Promise<ContentIdeas> =
         }
     });
     
-    const parsedData = parseJsonResponse(response.text);
+    const parsedData = parseJsonResponse(response.text || "");
 
     if (typeof parsedData !== 'object' || parsedData === null || !Array.isArray(parsedData.titles) || typeof parsedData.outline !== 'string') {
              throw new Error("Received malformed data from API: object has incorrect shape.");
