@@ -101,10 +101,10 @@ const Header: React.FC<HeaderProps> = ({
             <div className="w-full sm:w-auto">
                 <label htmlFor="saturation-level" className="block mb-2 text-sm font-medium text-brand-off-white/70">Max. Saturation</label>
                 <select id="saturation-level" value={saturationLevel} onChange={e => onSaturationLevelChange(e.target.value)} className={inputStyles} aria-label="Maximum content saturation">
-                    <option value="0.05"><5%</option>
-                    <option value="0.01"><1%</option>
-                    <option value="0.001"><0.1%</option>
-                    <option value="0.0001"><0.01%</option>
+                    <option value="0.05">5%</option>
+                    <option value="0.01">1%</option>
+                    <option value="0.001">0.1%</option>
+                    <option value="0.0001">0.01%</option>
                 </select>
             </div>
              <div className="w-full sm:w-auto">
