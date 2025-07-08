@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import ReactDOM from 'react-dom/client';
 import ReactMarkdown from 'react-markdown';
 
 // --- TYPES ---
@@ -334,5 +333,5 @@ const App = () => {
     );
 };
 
-const root = ReactDOM.createRoot(document.getElementById('root')!);
-root.render(<React.StrictMode><App /></React.StrictMode>);
+export default App;
+
