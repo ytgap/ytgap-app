@@ -59,7 +59,7 @@ const fetchYouTubeTrendsFromAI = async (selectedDate: string, niche: string, sea
         }
     });
 
-    const parsedData = parseJsonResponse(response.text);
+    const parsedData = parseJsonResponse(response.text || "");
 
     if (!Array.isArray(parsedData)) {
         throw new Error("Received malformed data from AI: expected an array.");
