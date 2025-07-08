@@ -46,6 +46,7 @@ const fetchYouTubeTrends = async (selectedDate: string, niche: string, searchVol
         return data as YouTubeTrend[];
     } catch (error) {
         handleApiError(error, 'fetching YouTube trends');
+      throw error;
     }
 };
 
