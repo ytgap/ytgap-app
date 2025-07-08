@@ -70,5 +70,6 @@ export const generateContentIdeas = async (term: string): Promise<ContentIdeas> 
         return data as ContentIdeas;
     } catch (error) {
         handleApiError(error, 'generating content ideas');
+        throw error;
     }
 }
