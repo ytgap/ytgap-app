@@ -18,7 +18,7 @@ type ViewOption = 'search' | 'saved';
 // --- IMPORTANT ---
 // Once you deploy your backend to Vercel, you will get a URL.
 // Replace the placeholder below with your actual Vercel URL.
-const BACKEND_URL = 'https://YOUR_VERCEL_BACKEND_URL/api/trends';
+const BACKEND_URL = 'https://ytgap-app.vercel.app/api/trends';
 
 
 // --- API SERVICE ---
@@ -33,8 +33,8 @@ const handleApiError = (error: unknown, context: string): never => {
 const fetchYouTubeTrends = async (selectedDate: string, niche: string, searchVolume: string, saturationLevel: string): Promise<YouTubeTrend[]> => {
     if (BACKEND_URL.includes('YOUR_VERCEL_BACKEND_URL')) {
         throw new Error("Configuration Error: Please update the BACKEND_URL in index.tsx with your Vercel deployment URL.");
-      return [];
-    }
+          }
+  return [];
     try {
         const response = await fetch(BACKEND_URL, {
             method: 'POST',
