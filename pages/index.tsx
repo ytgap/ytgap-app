@@ -33,6 +33,7 @@ const handleApiError = (error: unknown, context: string): never => {
 const fetchYouTubeTrends = async (selectedDate: string, niche: string, searchVolume: string, saturationLevel: string): Promise<YouTubeTrend[]> => {
     if (BACKEND_URL.includes('YOUR_VERCEL_BACKEND_URL')) {
         throw new Error("Configuration Error: Please update the BACKEND_URL in index.tsx with your Vercel deployment URL.");
+      return [];
     }
     try {
         const response = await fetch(BACKEND_URL, {
