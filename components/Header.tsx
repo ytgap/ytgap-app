@@ -91,10 +91,11 @@ const Header: React.FC<HeaderProps> = ({
             <div className="w-full sm:w-auto">
                 <label htmlFor="search-volume" className="block mb-2 text-sm font-medium text-brand-off-white/70">Min. Search Volume</label>
                 <select id="search-volume" value={searchVolume} onChange={e => onSearchVolumeChange(e.target.value)} className={inputStyles} aria-label="Minimum search volume">
-                    <option value="10000">> 10,000</option>
-                    <option value="50000">> 50,000</option>
-                    <option value="100000">> 100,000</option>
-                    <option value="500000">> 500,000</option>
+                    <option value="10000">10,000</option>
+<option value="50000">50,000</option>
+<option value="100000">100,000</option>
+<option value="500000">500,000</option>
+
                 </select>
             </div>
             <div className="w-full sm:w-auto">
